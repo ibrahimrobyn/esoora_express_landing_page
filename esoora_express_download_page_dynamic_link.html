@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Download Our App</title>
+    <script>
+      (function() {
+        var ua = navigator.userAgent || navigator.vendor || window.opera;
+        if (/android/i.test(ua)) {
+          window.location.href = "https://play.google.com/store/apps/details?id=com.your.android";
+        } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+          window.location.href = "https://apps.apple.com/app/id123456789";
+        } else {
+          document.getElementById("download-btn").style.display = "block";
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <h1>Download Our App</h1>
+    <a id="download-btn" href="#" style="display:none;">Click here if you’re not redirected</a>
+  </body>
+</html>
